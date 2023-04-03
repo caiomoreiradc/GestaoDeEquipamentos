@@ -32,27 +32,23 @@ namespace Gestão_de_Equipamentos
         private static void RegistroEquipamentos(ArrayList idEquipamento, ArrayList nomeEquipamento, ArrayList precoEquipamento, ArrayList numerodeserie, ArrayList fabricacaoEquipamento, ArrayList fabricanteEquipamento)
         {
             Console.Clear();
-            Console.WriteLine("Insira o ID do equipamento:");
+            Console.Write("Insira o ID do equipamento: ");
             idEquipamento.Add(int.Parse(Console.ReadLine()));
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o nome do equipamento");
+            Console.Write("Insira o nome do equipamento: ");
             nomeEquipamento.Add(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o preço do equipamento");
+            Console.Write("Insira o preço do equipamento: ");
             precoEquipamento.Add(int.Parse(Console.ReadLine()));
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o numero de série do equipamento");
+            Console.Write("Insira o numero de série do equipamento: ");
             numerodeserie.Add(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Insira a data de fabricação");
+            Console.Write("Insira a data de fabricação: ");
             fabricacaoEquipamento.Add(int.Parse(Console.ReadLine()));
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o(a) fabricante do equipamento");
+        
+            Console.Write("Insira o(a) fabricante do equipamento: ");
             fabricanteEquipamento.Add(Console.ReadLine());
         }
         private static void VisualizarEquipamentos(ArrayList idEquipamento, ArrayList nomeEquipamento, ArrayList precoEquipamento, ArrayList numerodeserie, ArrayList fabricacaoEquipamento, ArrayList fabricanteEquipamento)
@@ -79,59 +75,52 @@ namespace Gestão_de_Equipamentos
                 Console.WriteLine();
             }
         }
-        private static void EditarEquipamentos(ArrayList nomeEquipamento, ArrayList precoEquipamento, ArrayList numerodeserie, ArrayList fabricacaoEquipamento, ArrayList fabricanteEquipamento)
+     private static void EditarEquipamentos(ArrayList nomeEquipamento, ArrayList precoEquipamento, ArrayList numerodeserie, ArrayList fabricacaoEquipamento, ArrayList fabricanteEquipamento)
         {
             Console.Clear();
             Console.WriteLine("Insira o ID que deseja editar: ");
             int idEdit = int.Parse(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o nome do equipamento");
+            Console.WriteLine("Insira o nome do equipamento: ");
             nomeEquipamento[idEdit - 1] = Console.ReadLine();
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o preço do equipamento");
+            Console.WriteLine("Insira o preço do equipamento: ");
             precoEquipamento[idEdit - 1] = int.Parse(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o numero de série do equipamento");
+            Console.WriteLine("Insira o numero de série do equipamento: ");
             numerodeserie[idEdit - 1] = Console.ReadLine();
 
-            Console.WriteLine();
-            Console.WriteLine("Insira a data de fabricação");
+            Console.Write("Insira a data de fabricação: ");
             fabricacaoEquipamento[idEdit - 1] = int.Parse(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o(a) fabricante do equipamento");
+            Console.Write("Insira o(a) fabricante do equipamento: ");
             fabricanteEquipamento[idEdit - 1] = Console.ReadLine();
         }
-        private static void ExcluirEquipamento(ArrayList idEquipamento, ArrayList nomeEquipamento, ArrayList numerodeserie, ArrayList fabricacaoEquipamento, ArrayList fabricanteEquipamento)
+        private static void ExcluirEquipamento(ArrayList idEquipamento, ArrayList nomeEquipamento, ArrayList precoEquipamento, ArrayList numerodeserie, ArrayList fabricacaoEquipamento, ArrayList fabricanteEquipamento)
         {
             Console.Clear();
-            Console.WriteLine("Insira o id do equipamento que deseja excluir");
+            Console.Write("Insira o id do equipamento que deseja excluir: ");
             int idExcluir = int.Parse(Console.ReadLine());
-            idEquipamento[idExcluir - 1] = "";
+            idEquipamento[idExcluir - 1] = "X";
             nomeEquipamento[idExcluir - 1] = "EQUIPAMENTO FORA DE ESTOQUE";
+            precoEquipamento[idExcluir - 1] = "R$FREE";
             numerodeserie[idExcluir - 1] = "excluido";
-            fabricacaoEquipamento[idExcluir - 1] = "ddMMaaaa";
+            fabricacaoEquipamento[idExcluir - 1] = "00000000";
             fabricanteEquipamento[idExcluir - 1] = "unknown";
         }
         private static void RegistrarChamado(ArrayList idChamado, ArrayList nomeChamado, ArrayList equipamentoChamado, ArrayList dataChamado)
         {
             Console.Clear();
-            Console.WriteLine("Insira o ID do chamado: ");
+            Console.Write("Insira o ID do chamado: ");
             idChamado.Add(int.Parse(Console.ReadLine()));
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o nome do chamado: ");
+            Console.Write("Insira o nome do chamado: ");
             nomeChamado.Add(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o nome do equipamento");
+            Console.Write("Insira o nome do equipamento: ");
             equipamentoChamado.Add(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Insira a data do chamado");
+            Console.Write("Insira a data do chamado: ");
             dataChamado.Add(int.Parse(Console.ReadLine()));
         }
         private static void VisualizarChamado(ArrayList idChamado, ArrayList nomeChamado, ArrayList equipamentoChamado, ArrayList dataChamado)
@@ -158,19 +147,16 @@ namespace Gestão_de_Equipamentos
         private static void EditarChamado(ArrayList nomeChamado, ArrayList equipamentoChamado, ArrayList dataChamado)
         {
             Console.Clear();
-            Console.WriteLine("Insira o ID que deseja editar: ");
+            Console.Write("Insira o ID que deseja editar: ");
             int idEdit = int.Parse(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o nome do equipamento");
+            Console.Write("Insira o nome do equipamento: ");
             nomeChamado[idEdit - 1] = Console.ReadLine();
 
-            Console.WriteLine();
-            Console.WriteLine("Insira o equipamento do chamado");
+            Console.Write("Insira o equipamento do chamado: ");
             equipamentoChamado[idEdit - 1] = int.Parse(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Insira a data do chamado");
+            Console.Write("Insira a data do chamado: ");
             dataChamado[idEdit - 1] = int.Parse(Console.ReadLine());
         }
         private static void ExcluirChamado(ArrayList idChamado, ArrayList nomeChamado, ArrayList equipamentoChamado, ArrayList dataChamado)
@@ -178,10 +164,10 @@ namespace Gestão_de_Equipamentos
             Console.Clear();
             Console.WriteLine("Insira o id do equipamento que deseja excluir");
             int idExcluir = int.Parse(Console.ReadLine());
-            idChamado[idExcluir - 1] = "";
+            idChamado[idExcluir - 1] = "X";
             nomeChamado[idExcluir - 1] = "Chamado finalizado!";
             equipamentoChamado[idExcluir - 1] = "Chamado finalizado!";
-            dataChamado[idExcluir - 1] = "ddMMaaaa";
+            dataChamado[idExcluir - 1] = "00000000";
         }
         static void Main(string[] args)
         {
