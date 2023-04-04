@@ -101,12 +101,12 @@ namespace Gestão_de_Equipamentos
             Console.Clear();
             Console.Write("Insira o id do equipamento que deseja excluir: ");
             int idExcluir = int.Parse(Console.ReadLine());
-            idEquipamento[idExcluir - 1] = "X";
-            nomeEquipamento[idExcluir - 1] = "EQUIPAMENTO FORA DE ESTOQUE";
-            precoEquipamento[idExcluir - 1] = "R$FREE";
-            numerodeserie[idExcluir - 1] = "excluido";
-            fabricacaoEquipamento[idExcluir - 1] = "00000000";
-            fabricanteEquipamento[idExcluir - 1] = "unknown";
+            idEquipamento.RemoveAt(idExcluir - 1);
+            nomeEquipamento.RemoveAt(idExcluir - 1);
+            precoEquipamento.RemoveAt(idExcluir - 1);
+            numerodeserie.RemoveAt(idExcluir - 1);
+            fabricacaoEquipamento.RemoveAt(idExcluir - 1);
+            fabricanteEquipamento.RemoveAt(idExcluir - 1);
         }
         private static void RegistrarChamado(ArrayList idChamado, ArrayList nomeChamado, ArrayList equipamentoChamado, ArrayList dataChamado)
         {
@@ -164,10 +164,10 @@ namespace Gestão_de_Equipamentos
             Console.Clear();
             Console.WriteLine("Insira o id do equipamento que deseja excluir");
             int idExcluir = int.Parse(Console.ReadLine());
-            idChamado[idExcluir - 1] = "X";
-            nomeChamado[idExcluir - 1] = "Chamado finalizado!";
-            equipamentoChamado[idExcluir - 1] = "Chamado finalizado!";
-            dataChamado[idExcluir - 1] = "00000000";
+            idChamado.RemoveAt(idExcluir - 1);
+            nomeChamado.RemoveAt(idExcluir - 1);
+            equipamentoChamado.RemoveAt(idExcluir - 1);
+            dataChamado.RemoveAt(idExcluir - 1);
         }
         static void Main(string[] args)
         {
